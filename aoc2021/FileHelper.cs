@@ -18,5 +18,27 @@ namespace aoc2021
             return File.ReadAllLines(filepath).ToList();
         }
 
+        internal static bool[,] GetMatrixBoolFromFile(string filepath)
+        {
+            var lines = File.ReadAllLines(filepath);
+
+            var matrix = new bool[lines.Count(), lines.First().Count()];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                for (int j = 0; j < lines.First().Count(); j++)
+                {
+                    if (lines[i][j].Equals('1'))
+                    {
+                        matrix[i, j] = true;
+                    }
+                    else
+                    {
+                        matrix[i, j] = false;
+                    }
+                }
+            }
+            return matrix;
+        }
+
     }
 }

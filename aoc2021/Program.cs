@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aoc2021;
 using aoc2021.Day2;
+using aoc2021.Day3;
 
 Console.WriteLine("Advent of Code 2021!");
 
@@ -14,3 +15,8 @@ Console.WriteLine("*** Day 2 ***");
 
 Console.WriteLine($"Product of position after given instructions are {Day2.GetPositionFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day2_1.txt")}. " );
 Console.WriteLine($"Product of position with aim after given instructions are {Day2.GetPositionAimFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day2_1.txt")}. ");
+
+
+Console.WriteLine("*** Day 3 ***");
+Console.WriteLine($"Power consumption is {Day3.CalculatePowerConsumptionFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day3_1.txt")}. ");
+Console.WriteLine($"Life support rating is {Day3.CalculateLifeSupportRatingFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day3_1.txt")}. ");
