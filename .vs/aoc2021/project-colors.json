@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7030ad2e-54d0-407a-947a-a21471b8623e": {
+      "ProjectGuid": "7030ad2e-54d0-407a-947a-a21471b8623e",
+      "DisplayName": "aoc2021",
+      "ColorIndex": 0
+    },
+    "bbdc6f37-abfb-4a56-8785-c83899560c94": {
+      "ProjectGuid": "bbdc6f37-abfb-4a56-8785-c83899560c94",
+      "DisplayName": "aoc2021test",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "6364085e-6c24-47c3-80ae-fc95062fe2da": {
+      "ProjectGuid": "6364085e-6c24-47c3-80ae-fc95062fe2da",
+      "DisplayName": "aoc2021Test",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
