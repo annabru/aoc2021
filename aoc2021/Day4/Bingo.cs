@@ -50,7 +50,7 @@ public class Bingo
             }
         }
 
-        return boards[winningBoard].GetScore();
+        return boards[lastWinningBoard].GetScore();
     }
 
     private int MarkBoardsAndReturnTrueIfBingo(int nbr, out int winningBoard)

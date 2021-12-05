@@ -3,6 +3,7 @@ using aoc2021;
 using aoc2021.Day2;
 using aoc2021.Day3;
 using aoc2021.Day4;
+using aoc2021.Day5;
 
 Console.WriteLine("Advent of Code 2021!");
 
@@ -26,3 +27,9 @@ Console.WriteLine("*** Day 4 ***");
 var (win, lose) = BingoReader.ReadBingoFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day4_1.txt");
 Console.WriteLine($"Score of winning board is {win}. ");
 Console.WriteLine($"Score of losing board is {lose}. ");
+
+Console.WriteLine("*** Day 5 ***");
+var above2 = new Day5(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day5_1.txt", false).NumberOfCoordinatesWithValue2orHigher();
+var above2WithDiagonal = new Day5(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day5_1.txt", true).NumberOfCoordinatesWithValue2orHigher();
+Console.WriteLine($"Number of position where at least two lines overlap is {above2}. ");
+Console.WriteLine($"Number of position where at least two lines overlap when counting diagonals is {above2WithDiagonal}. ");
