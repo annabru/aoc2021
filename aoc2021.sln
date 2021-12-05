@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aoc2021", "aoc2021\aoc2021.csproj", "{7030AD2E-54D0-407A-947A-A21471B8623E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc2021Test", "TestProject1\aoc2021Test.csproj", "{DD0405C4-2F47-4AD2-8DFD-AA2F08D378B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc2021Test", "aoc2021Test\aoc2021Test.csproj", "{DD0405C4-2F47-4AD2-8DFD-AA2F08D378B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
