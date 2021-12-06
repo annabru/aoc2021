@@ -40,5 +40,9 @@ namespace aoc2021
             return matrix;
         }
 
+        internal static string GetFirstLineFromFile(string filepath)
+        {
+            return File.ReadAllLines(filepath).First();
+        }
     }
 }

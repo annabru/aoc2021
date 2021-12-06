@@ -4,6 +4,7 @@ using aoc2021.Day2;
 using aoc2021.Day3;
 using aoc2021.Day4;
 using aoc2021.Day5;
+using aoc2021.Day6;
 
 Console.WriteLine("Advent of Code 2021!");
 
@@ -33,3 +34,9 @@ var above2 = new Day5(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day5_1.
 var above2WithDiagonal = new Day5(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day5_1.txt", true).NumberOfCoordinatesWithValue2orHigher();
 Console.WriteLine($"Number of position where at least two lines overlap is {above2}. ");
 Console.WriteLine($"Number of position where at least two lines overlap when counting diagonals is {above2WithDiagonal}. ");
+
+Console.WriteLine("*** Day 6 ***");
+var day6_1 = new Day6(FileHelper.GetFirstLineFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day6_1.txt"));
+var day6_2 = new Day6(FileHelper.GetFirstLineFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day6_1.txt"));
+Console.WriteLine($"Number of fishes after 80 days are {day6_1.ReproduceUntil(80)}. ");
+Console.WriteLine($"Number of fishes after 80 days are {day6_2.ReproduceUntil(256)}. ");
