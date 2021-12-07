@@ -13,6 +13,13 @@ namespace aoc2021
             return File.ReadAllLines(filepath).Select(l => Int32.Parse(l)).ToList();
         }
 
+        internal static List<int> GetIntsFromCommaSeperatedFile(string filepath)
+        {
+            var line = File.ReadAllLines(filepath).First();
+            var ints = line.Split(',');
+            return ints.Select(l => Int32.Parse(l)).ToList();
+        }
+
         internal static List<string> GetLinesFromFile(string filepath)
         {
             return File.ReadAllLines(filepath).ToList();

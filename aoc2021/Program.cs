@@ -5,6 +5,7 @@ using aoc2021.Day3;
 using aoc2021.Day4;
 using aoc2021.Day5;
 using aoc2021.Day6;
+using aoc2021.Day7;
 
 Console.WriteLine("Advent of Code 2021!");
 
@@ -40,3 +41,9 @@ var day6_1 = new Day6(FileHelper.GetFirstLineFromFile(@"C:\Users\annab\source\re
 var day6_2 = new Day6(FileHelper.GetFirstLineFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day6_1.txt"));
 Console.WriteLine($"Number of fishes after 80 days are {day6_1.ReproduceUntil(80)}. ");
 Console.WriteLine($"Number of fishes after 80 days are {day6_2.ReproduceUntil(256)}. ");
+
+
+Console.WriteLine("*** Day 7 ***");
+Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"),true).BestPosition());
+Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"), false).BestPosition());
+
