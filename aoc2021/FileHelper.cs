@@ -8,6 +8,21 @@ namespace aoc2021
 {
     internal class FileHelper
     {
+
+        internal static List<List<string>> Get7SegmentDisplayInputValues(string filepath)
+        {
+            var lines = File.ReadAllLines(filepath);
+            var output = lines.Select(l => l.Split('|').First().Trim());
+            return output.Select(x => x.Split(' ').ToList()).ToList();
+        }
+
+        internal static List<List<string>> Get7SegmentDisplayOutputValues(string filepath)
+        {
+            var lines = File.ReadAllLines(filepath);
+            var output = lines.Select(l => l.Split('|').Last().Trim());
+            return output.Select(x => x.Split(' ').ToList()).ToList();
+        }
+
         internal static List<int> GetIntsFromFile(string filepath)
         {
             return File.ReadAllLines(filepath).Select(l => Int32.Parse(l)).ToList();

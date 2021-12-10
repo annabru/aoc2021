@@ -6,9 +6,11 @@ using aoc2021.Day4;
 using aoc2021.Day5;
 using aoc2021.Day6;
 using aoc2021.Day7;
+using aoc2021.Day8;
 
 Console.WriteLine("Advent of Code 2021!");
 
+/*
 Console.WriteLine("*** Day 1 ***");
 
 Console.WriteLine($"Number of increaes is: {Day1.CountIncreasesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day1_1.txt", 1) }. ");
@@ -46,4 +48,11 @@ Console.WriteLine($"Number of fishes after 80 days are {day6_2.ReproduceUntil(25
 Console.WriteLine("*** Day 7 ***");
 Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"),true).BestPosition());
 Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"), false).BestPosition());
+*/
+
+Console.WriteLine("*** Day 8 ***");
+var day8_input = FileHelper.Get7SegmentDisplayInputValues(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day8_1.txt");
+var day8_output = FileHelper.Get7SegmentDisplayOutputValues(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day8_1.txt");
+Console.WriteLine($"Occurences of 1, 4, 7 and 8: {Day8.Count1_4_7_8(day8_output)}" );
+Console.WriteLine($"Sum of all outputs: {Day8.GetSum(day8_input, day8_output) }" );
 
