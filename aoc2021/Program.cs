@@ -56,15 +56,19 @@ var day8_input = FileHelper.Get7SegmentDisplayInputValues(@"C:\Users\annab\sourc
 var day8_output = FileHelper.Get7SegmentDisplayOutputValues(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day8_1.txt");
 Console.WriteLine($"Occurences of 1, 4, 7 and 8: {Day8.Count1_4_7_8(day8_output)}" );
 Console.WriteLine($"Sum of all outputs: {Day8.GetSum(day8_input, day8_output) }" );
+*/ 
 
 Console.WriteLine("*** Day 9 ***");
-var lp = new Lowpoints(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day9_1.txt"));
+var lp = new HeightMap(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day9_1.txt"));
 Console.WriteLine($"Sum of lowpoints risklevels: {lp.GetSumOfLowpoints() }");
-*/
+Console.WriteLine($"Sum of 3 largest basins: {lp.GetProductOfThreeLargestBasins() }");
 
 
+/*
 Console.WriteLine("*** Day 11 ***");
 var octupus = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
 Console.WriteLine($"Flashes after 100 days: {octupus.NumberOfFlashesAfterNSteps(100) }");
 var octupus2 = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
 Console.WriteLine($"Flashes after 100 days: {octupus2.NumberOfStepsUntilSync() }");
+
+*/
