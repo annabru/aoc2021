@@ -6,14 +6,26 @@ using System.Threading.Tasks;
 
 namespace aoc2021
 {
-    internal class FileHelper
+    public class FileHelper
     {
 
-        internal static List<List<string>> Get7SegmentDisplayInputValues(string filepath)
+        public static List<List<string>> Get7SegmentDisplayInputValues(string filepath)
         {
             var lines = File.ReadAllLines(filepath);
             var output = lines.Select(l => l.Split('|').First().Trim());
             return output.Select(x => x.Split(' ').ToList()).ToList();
+        }
+
+        public static List<List<int>> GetHeightMapFromFile(string filepath)
+        {
+            var res = new List<List<int>>();
+            var lines = File.ReadAllLines(filepath);
+            foreach (var line in lines)
+            {
+                var ints = line.Select(c => int.Parse(c.ToString())).ToList();
+                res.Add( ints );
+            }
+            return res;
         }
 
         internal static List<List<string>> Get7SegmentDisplayOutputValues(string filepath)

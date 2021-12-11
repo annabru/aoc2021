@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aoc2021;
+using aoc2021.Day11;
 using aoc2021.Day2;
 using aoc2021.Day3;
 using aoc2021.Day4;
@@ -7,6 +8,7 @@ using aoc2021.Day5;
 using aoc2021.Day6;
 using aoc2021.Day7;
 using aoc2021.Day8;
+using aoc2021.Day9;
 
 Console.WriteLine("Advent of Code 2021!");
 
@@ -48,7 +50,6 @@ Console.WriteLine($"Number of fishes after 80 days are {day6_2.ReproduceUntil(25
 Console.WriteLine("*** Day 7 ***");
 Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"),true).BestPosition());
 Console.WriteLine("Best point: " + new Day7(FileHelper.GetIntsFromCommaSeperatedFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day7_1.txt"), false).BestPosition());
-*/
 
 Console.WriteLine("*** Day 8 ***");
 var day8_input = FileHelper.Get7SegmentDisplayInputValues(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day8_1.txt");
@@ -56,3 +57,14 @@ var day8_output = FileHelper.Get7SegmentDisplayOutputValues(@"C:\Users\annab\sou
 Console.WriteLine($"Occurences of 1, 4, 7 and 8: {Day8.Count1_4_7_8(day8_output)}" );
 Console.WriteLine($"Sum of all outputs: {Day8.GetSum(day8_input, day8_output) }" );
 
+Console.WriteLine("*** Day 9 ***");
+var lp = new Lowpoints(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day9_1.txt"));
+Console.WriteLine($"Sum of lowpoints risklevels: {lp.GetSumOfLowpoints() }");
+*/
+
+
+Console.WriteLine("*** Day 11 ***");
+var octupus = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
+Console.WriteLine($"Flashes after 100 days: {octupus.NumberOfFlashesAfterNSteps(100) }");
+var octupus2 = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
+Console.WriteLine($"Flashes after 100 days: {octupus2.NumberOfStepsUntilSync() }");
