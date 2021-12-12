@@ -47,7 +47,7 @@ namespace aoc2021
             return ints.Select(l => Int32.Parse(l)).ToList();
         }
 
-        internal static List<string> GetLinesFromFile(string filepath)
+        public static List<string> GetLinesFromFile(string filepath)
         {
             return File.ReadAllLines(filepath).ToList();
         }

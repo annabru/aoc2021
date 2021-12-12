@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aoc2021;
+using aoc2021.Day10;
 using aoc2021.Day11;
 using aoc2021.Day2;
 using aoc2021.Day3;
@@ -59,9 +60,9 @@ Console.WriteLine($"Sum of all outputs: {Day8.GetSum(day8_input, day8_output) }"
 */ 
 
 Console.WriteLine("*** Day 9 ***");
-var lp = new HeightMap(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day9_1.txt"));
-Console.WriteLine($"Sum of lowpoints risklevels: {lp.GetSumOfLowpoints() }");
-Console.WriteLine($"Sum of 3 largest basins: {lp.GetProductOfThreeLargestBasins() }");
+var ns = new NavigationSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day10_1.txt"));
+Console.WriteLine($"Corrupted score: {ns.GetCorruptedScore() }");
+Console.WriteLine($"Incomplete score: {ns.GetIncompleteScore()}");
 
 
 /*
