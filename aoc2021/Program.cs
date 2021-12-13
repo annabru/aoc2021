@@ -2,6 +2,7 @@
 using aoc2021;
 using aoc2021.Day10;
 using aoc2021.Day11;
+using aoc2021.Day12;
 using aoc2021.Day2;
 using aoc2021.Day3;
 using aoc2021.Day4;
@@ -57,15 +58,12 @@ var day8_input = FileHelper.Get7SegmentDisplayInputValues(@"C:\Users\annab\sourc
 var day8_output = FileHelper.Get7SegmentDisplayOutputValues(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day8_1.txt");
 Console.WriteLine($"Occurences of 1, 4, 7 and 8: {Day8.Count1_4_7_8(day8_output)}" );
 Console.WriteLine($"Sum of all outputs: {Day8.GetSum(day8_input, day8_output) }" );
-*/ 
 
 Console.WriteLine("*** Day 9 ***");
 var ns = new NavigationSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day10_1.txt"));
 Console.WriteLine($"Corrupted score: {ns.GetCorruptedScore() }");
 Console.WriteLine($"Incomplete score: {ns.GetIncompleteScore()}");
 
-
-/*
 Console.WriteLine("*** Day 11 ***");
 var octupus = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
 Console.WriteLine($"Flashes after 100 days: {octupus.NumberOfFlashesAfterNSteps(100) }");
@@ -73,3 +71,9 @@ var octupus2 = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\sour
 Console.WriteLine($"Flashes after 100 days: {octupus2.NumberOfStepsUntilSync() }");
 
 */
+
+Console.WriteLine("*** Day 12 ***");
+var cs = new CaveSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day12_1.txt"), false );
+Console.WriteLine($"Number of paths: {cs.Paths.Count}");
+var cs2 = new CaveSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day12_1.txt"), true);
+Console.WriteLine($"Number of paths: {cs2.Paths.Count}");
