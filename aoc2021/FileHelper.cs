@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace aoc2021
+﻿namespace aoc2021
 {
     public class FileHelper
     {
@@ -77,6 +71,32 @@ namespace aoc2021
         internal static string GetFirstLineFromFile(string filepath)
         {
             return File.ReadAllLines(filepath).First();
+        }
+
+        internal static (List<string>, List<(char,int)>) GetFoldingInstructions(string f)
+        {
+            var allLines = GetLinesFromFile(f);
+            var points = new List<string>();
+            var instr = new List<(char,int)>();
+
+            var i = 0;
+            while (allLines[i] != "")
+            {
+                points.Add(allLines[i]);
+                i++;
+            }
+
+            i++;
+            while(i < allLines.Count && allLines[i] != "")
+            {
+                //fold along x=655
+                var line = allLines[i];
+                var xOrY = line[11];
+                var number = int.Parse(line.Substring(13));
+                instr.Add((xOrY, number));
+                i++;
+            }
+            return (points, instr);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aoc2021;
 using aoc2021.Day10;
+using aoc2021.Day10_19.Day13;
 using aoc2021.Day11;
 using aoc2021.Day12;
 using aoc2021.Day2;
@@ -70,10 +71,20 @@ Console.WriteLine($"Flashes after 100 days: {octupus.NumberOfFlashesAfterNSteps(
 var octupus2 = new Octupus(FileHelper.GetHeightMapFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day11_1.txt"));
 Console.WriteLine($"Flashes after 100 days: {octupus2.NumberOfStepsUntilSync() }");
 
-*/
 
 Console.WriteLine("*** Day 12 ***");
 var cs = new CaveSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day12_1.txt"), false );
 Console.WriteLine($"Number of paths: {cs.Paths.Count}");
 var cs2 = new CaveSystem(FileHelper.GetLinesFromFile(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day12_1.txt"), true);
 Console.WriteLine($"Number of paths: {cs2.Paths.Count}");
+*/
+
+Console.WriteLine("*** Day 13 ***");
+var (points, instructions) = FileHelper.GetFoldingInstructions(@"C:\Users\annab\source\repos\aoc2021\aoc2021\data\day13_1.txt");
+var fold = new Fold(points);
+fold.FoldItX(new List<(char, int)> { instructions[0]});
+instructions.RemoveAt(0);
+Console.WriteLine($"Points visible after 1 fold: {fold.points.Count}");
+fold.FoldItX(instructions);
+Console.WriteLine($"Points visible after all folds:");
+fold.PrintPoints();
